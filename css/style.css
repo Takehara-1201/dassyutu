@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+/* 全体に関わる設定 */
+body { 
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'sans-serif';
+    font-size: 16px;
+}
+
+
+
+/* index */
+body.index {
+    background-color: rgb(255, 225, 156);
+}
+/* 画面上部に配置 */
+body.index .top_line {
+    position: absolute;
+    border-top: 30px solid rgb(58, 30, 0);
+    width: 100%;
+}
+/* 画面下部に配置 */
+body.index .under_line {
+    position: absolute;
+    border-bottom: 30px solid rgb(58, 30, 0);
+    bottom: 0px;
+    width: 100%;
+}
+/* ロゴ */
+body.index .title_logo {
+    position: absolute;
+    top: 50%;         /* 親要素の高さの50% */
+    left: 50%;        /* 親要素の幅の50% */
+    transform: translate(-50%, -50%); /* 自身のサイズの半分だけ上と左に移動して中央に配置 */
+    object-fit: cover; /* 画像が画面いっぱいに収まるようにする */
+}
+body.index .text{
+    position: absolute;
+    top: 90%;
+    left: 5%
+}
+
+
+
+/* question_ai *//* question_i */
+body.question .head {
+    text-align: center;
+} 
+body.question .logo {
+    margin-top: 60px;
+    width: 300px;   /* 幅を300pxに設定 */
+    height: auto;   /* 高さは幅に合わせて自動調整 */
+    margin-bottom: 200px;
+}
+body.question .head h1 {
+    font-size: 40px;
+    font-weight: bold; /* 文字を太く */
+    margin-bottom: 150px;
+}
+body.question .warp_img {
+    width: 100px;   /* 幅を300pxに設定 */
+    height: auto;   /* 高さは幅に合わせて自動調整 */
+    margin-bottom: 300px;
+}
+body.question .text {
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 400px;
+}
+body.question .foot {
+    text-align: center;
+    margin-bottom: 500px;
+}
+/* 画面に画像を表示 */
+/* 画像を隠す */
+.modal-image {
+    display: none;
+    position: fixed;          /* 画面に固定 */
+    top: 50%;                 /* 縦位置を中央に */
+    left: 50%;                /* 横位置を中央に */
+    transform: translate(-50%, -50%); /* 中央に配置 */
+    width: 80%;               /* 必要に応じて調整 */
+    max-width: 600px;         /* 画像の最大幅 */
+    z-index: 1000;            /* 他の要素の前面に表示 */
+    background-color: white;  /* 背景を白に */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* 影を付ける */
+    padding: 10px;            /* 少し余白をつける */
+    border-radius: 8px;       /* 角を丸める */
+}
+/* 背景のオーバーレイ */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
+    z-index: 999; /* モーダル画像の下 */
+}
+/* ボタン */
+#wordInput {
+    background-color: white;  /* 背景色を白に設定 */
+    border: 1px solid #7b7b7b;   /* 枠線を追加（任意） */
+    padding: 0px;             /* 内側の余白を設定（任意） */
+    font-size: 16px;           /* フォントサイズ（任意） */
+}
+button {
+    background-color: rgb(189, 194, 244);   /* ボタンの背景色を白に設定 */
+    border: 1px solid #686868;    /* ボタンの枠線（任意） */
+    padding: 0px 3px;        /* ボタン内の余白 */
+    font-size: 16px;            /* フォントサイズ */
+    cursor: pointer;           /* マウスカーソルが手のひらに変わる */
+    transition: background-color 0.3s ease; /* ホバー時の色変更にアニメーションを追加（任意） */
+}
+/* ボタンにホバーしたときの背景色変更 */
+button:hover {
+    background-color: #f0f0f0; /* マウスオーバー時の背景色 */
+}
+/* クリックテキストのスタイル */
+.click-text {
+    color: rgb(22, 22, 178);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+/* question_ai */
+body.question_ai {
+    background-color: rgb(255, 192, 192);
+}
+/* 上部のライン */
+body.question_ai .top_line {
+    position: fixed; /* 固定位置 */
+    top: 0;
+    width: 100%;
+    height: 30px;  /* ラインの高さ */
+    background-color: rgb(137, 14, 14); /* ラインの色 */
+}
+/* 下部のライン */
+body.question_ai .under_line {
+    position: fixed; /* 固定位置 */
+    bottom: 0;
+    width: 100%;
+    height: 30px;  /* ラインの高さ */
+    background-color: rgb(137, 14, 14); /* ラインの色 */
+}
+
+
+
+/* question_i */
+body.question_i {
+    background-color: rgb(207, 237, 255);
+}
+body.question_i .top_line {
+    position: fixed; /* 固定位置 */
+    top: 0;
+    width: 100%;
+    height: 30px;  /* ラインの高さ */
+    background-color: rgb(14, 37, 137); /* ラインの色 */
+}
+/* 下部のライン */
+body.question_i .under_line {
+    position: fixed; /* 固定位置 */
+    bottom: 0;
+    width: 100%;
+    height: 30px;  /* ラインの高さ */
+    background-color: rgb(14, 37, 137); /* ラインの色 */
+}
+
+
+
+/* answer_ai *//* answer_i */
+body.answer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-left: 20%;
+}
+body.answer .title{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+body.answer .ans_text {
+    font-size: 24px;
+    white-space: pre-wrap; /* 複数行に対応 */
+}
+body.answer .introduction_link{
+    position: fixed;
+    bottom: 60px; /* 画面の下から20ピクセル */
+    left: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正解</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="answer">
+    <h1 class="title">ｉ乗</h1>
+
+    <div id="ans_text"></div>
+
+    <div class="introduction_link"><a href="404.html">クリアおめでとう</a></div>
+
+    <!-- javascript -->
+    <script>
+        const textContent = `嘘の愛とは、不思議なものであり、時に私たちの心を支え、守るために生まれるものである。<br>
+        数学の世界におけるiもまた、実数だけでは表現できない『嘘の数』とも言える。<br>
+        iは、私たちが知っている数とは異なり、現実世界に直接存在しない概念だが、<br>
+        そのおかげで数多くの問題が解け、複雑な現象を理解できるようになる。<br>
+        つまり、iという嘘の数は、私たちに新しい視点を与え、数学や科学の発展を支えているのだ。<br>
+        <br>
+        iは嘘のようでありながら、真実を解き明かす鍵として機能していると言えるだろう。<br>
+        iの“虚”はただの幻想ではなく、世界の本質を捉えるための“もうひとつの現実”を映し出しているのだ。<br>
+        <br>
+        この嘘の数、iが持つ役割は、嘘も時には愛の一種であることを思い出させる。<br>
+        たとえば、大切な人を傷つけたくないとき、人はあえて真実を隠し、少しの嘘で相手を守ることがある。<br>
+        このような嘘は、相手を思いやるがゆえの行為であり、時にその嘘が心の支えとなり、<br>
+        より良い関係を築くための助けとなることもある。<br>
+        このようにして、嘘であっても、それが他者や世界に意味を持ち、<br>
+        支えとなるならば、愛の一種と考えられるのではないだろうか。`;
+        
+        let index = 0;
+        const textElement = document.getElementById('ans_text');
+    
+        // 文字を1文字ずつ表示する関数
+        function displayText() {
+            if (index < textContent.length) {
+                // 文字が <br> でない場合は通常通り追加
+                if (textContent.charAt(index) === '<' && textContent.charAt(index + 1) === 'b' && textContent.charAt(index + 2) === 'r') {
+                    textElement.innerHTML += "<br>"; // <br> タグが現れたら改行を追加
+                    index += 4; // <br> の4文字をスキップ
+                } else {
+                    textElement.innerHTML += textContent.charAt(index); // それ以外の文字を追加
+                    index++;
+                }
+                setTimeout(displayText, 30); // 30ミリ秒ごとに次の文字を表示
+            }
+        }
+    
+        displayText(); // 初期化
+    </script>
+</body>
+</html>

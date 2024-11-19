@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <script type="text/javascript">
+        // 戻るボタンを無効化して、リダイレクトする
+        window.onload = function() {
+            // 履歴を無効にする
+            history.pushState(null, null, location.href);
+            history.back();
+            history.forward();
+            // リダイレクト: 例としてGoogleに遷移
+            setTimeout(function() {
+                window.location.href = "https://www.google.com";
+            }, 1000); // 2秒後にリダイレクト
+        };
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+        .container {
+            text-align: center;
+        }
+        .message {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .sub-message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="message">404 Not Found</div>
+        <div class="sub-message">このサイトは消去されました</div>
+    </div>
+
+    <div class="footer">
+        <p>Cookieを消去してください</p>
+    </div>
+
+</body>
+</html>

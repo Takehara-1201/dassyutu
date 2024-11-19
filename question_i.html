@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ｉの世界</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="question question_i">
+    <!-- 上部のライン -->
+    <div class="top_line"></div>
+    
+    <!-- head -->
+    <div class="head">
+        <img src="img/logo_i.png" alt="logo" class="logo">
+        <h1>ｉの世界</h1>
+        <a href="question_ai.html" class="warp"><img src="img/warp_i.png" alt="ワープホール" class="warp_img"></a>
+    </div>
+
+    <!-- body -->
+    <div class="body">
+        <div class="text">
+            <p>ｉとは、数学において非常に特別な存在であり、
+                <br>虚数単位と呼ばれ、<span class="click-text" onclick="showImage('image1-2')">アルファベット</span>のiで表現される。
+                <br>実数では表現できない数を扱うために登場し、
+                <br>その定義はi² = -1という式によって示される。
+            </p>
+        </div>
+        <div class="text">
+            <p>ｉとは、単に数の枠を超えて、
+                <br>抽象的な思考の世界を広げるものでもある。
+                <br>例えば、複素数の乗法は<span class="click-text" onclick="showImage('image2-2')">回転</span>を意味し、
+                <br>iを何回か掛け合わせることで、
+                <br>数が90度ずつ回転する様子がわかる。
+            </p>
+        </div>
+        <div class="text">
+            <p>ｉとは、単なる数学的な概念にとどまらず、
+                <br>さまざまな現象を理解するための鍵でもある。
+                <br>例えば、電気工学においては、
+                <br>交流回路の解析において<span class="click-text" onclick="showImage('image3-2')">ｉ</span>を使って、
+                <br>位相のズレを表現することができる。
+            </p>
+        </div>
+    </div>
+
+    <!-- foot -->
+    <div class="foot">
+        <h2>あなたが見つけたものは</h2>
+        <input type="text" id="wordInput" placeholder="？">
+        <button onclick="checkWord_i()" aria-label="決定だよ">決定</button>
+    </div>
+
+    <!-- オーバーレイ -->
+    <div class="overlay" id="overlay" onclick="hideImage()"></div>
+    <!-- モーダル表示する画像 -->
+    <img src="img/question1_i.PNG" alt="question1_i" class="modal-image" id="image1-2">
+    <img src="img/question2_i.PNG" alt="question2_i" class="modal-image" id="image2-2">
+    <img src="img/question3_i.PNG" alt="question3_i" class="modal-image" id="image3-2">
+
+    <!-- 下部のライン -->
+    <div class="under_line"></div>
+
+    <!-- jsの読み込み -->
+    <script src="js/common.js"></script>
+</body>
+</html>

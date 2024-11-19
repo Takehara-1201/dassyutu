@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛の世界</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="question question_ai">
+    <!-- 上部のライン -->
+    <div class="top_line"></div>
+    
+    <!-- head -->
+    <div class="head">
+        <img src="img/logo_ai.png" alt="タイトル" class="logo">
+        <h1>愛の世界</h1>
+        <a href="question_i.html" class="warp"><img src="img/warp_ai.png" alt="ワープホール" class="warp_img"></a>
+    </div>
+
+    <!-- body -->
+    <div class="body">
+        <div class="text">
+            <p>愛とは、<span class="click-text" onclick="showImage('image1-1')">言葉</span>では表現しきれない深い感情であり、
+                <br>心と心が繋がる瞬間に感じる特別な力である。
+                <br>それは時に無償で、時に条件付きで、
+                <br>私たちの行動や思考に大きな影響を与える。
+            </p>
+        </div>
+        <div class="text">
+            <p>愛とは、<span class="click-text" onclick="showImage('image2-1')">時間</span>とともに変わることもある。
+                <br>最初は純粋で情熱的だったものが、
+                <br>年月が経つにつれて穏やかで
+                <br>深いものへと変わることがある。
+            </p>
+        </div>
+        <div class="text">
+            <p>
+                <br>愛とは、時に苦しみを伴うこともある。
+                <br>大切な人を失うことや、
+                <br>思いが届かないことがあったとき、
+                <br>その痛みは深く心に刻まれる。
+                <br>しかし、それでもなお<span class="click-text" onclick="showImage('image3-1')">愛</span>は私たちを強くし、
+                <br>前に進む力を与えてくれる。
+            </p>
+        </div>
+    </div>
+
+    <!-- food -->
+    <div class="foot">
+        <h2>あなたが見つけたものは</h2>
+        <input type="text" id="wordInput" placeholder="？">
+        <button onclick="checkWord_ai()" aria-label="決定だよ">決定</button>
+    </div>
+
+
+    <!-- オーバーレイ -->
+    <div class="overlay" id="overlay" onclick="hideImage()"></div>
+    <!-- モーダル表示する画像 -->
+    <img src="img/question1_ai.PNG" alt="question1_ai" class="modal-image" id="image1-1">
+    <img src="img/question2_ai.PNG" alt="question2_ai" class="modal-image" id="image2-1">
+    <img src="img/question3_ai.PNG" alt="question3_ai" class="modal-image" id="image3-1">
+
+    <!-- 下部のライン -->
+    <div class="under_line"></div>
+
+    <!-- jsの読み込み -->
+    <script src="js/common.js"></script>
+</body>
+</html>

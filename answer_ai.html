@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正解</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="answer">
+    <h1 class="title">愛情</h1>
+
+    <div id="ans_text"></div>
+
+    <div class="introduction_link"><a href="404.html">クリアおめでとう</a></div>
+
+    <!-- javascript -->
+    <script>
+        const textContent = `真実の愛とは、表面的な感情にとどまらず、相手を深く理解し、<br>
+        ありのままを受け入れる愛情であるといえる。<br>
+        それは一時的なときめきや、条件付きの感情ではなく、<br>
+        相手の幸せを自分の喜びとして感じるような、本当の思いやりに基づいた愛である。<br>
+        真実の愛は、相手がどんな状況にあっても変わらない強さを持ち、<br>
+        ただそばにいるだけでお互いを支え合える安心感を与えてくれる。<br>
+        <br>
+        真実の愛には、お互いの欠点も含めて受け入れる姿勢があり、<br>
+        時にぶつかり合うことがあっても、その絆は深まっていく。愛情が真実のものになると、見返りを求めることなく、<br>
+        相手の成長や幸せを心から願う気持ちが自然と湧き上がってくる。<br>
+        そうした愛情こそが、本当の意味で人を強くし、人生に深い意味をもたらしてくれるのだ。<br>`;
+        
+        let index = 0;
+        const textElement = document.getElementById('ans_text');
+    
+        // 文字を1文字ずつ表示する関数
+        function displayText() {
+            if (index < textContent.length) {
+                // 文字が <br> でない場合は通常通り追加
+                if (textContent.charAt(index) === '<' && textContent.charAt(index + 1) === 'b' && textContent.charAt(index + 2) === 'r') {
+                    textElement.innerHTML += "<br>"; // <br> タグが現れたら改行を追加
+                    index += 4; // <br> の4文字をスキップ
+                } else {
+                    textElement.innerHTML += textContent.charAt(index); // それ以外の文字を追加
+                    index++;
+                }
+                setTimeout(displayText, 30); // 30ミリ秒ごとに次の文字を表示
+            }
+        }
+    
+        displayText(); // 初期化
+    </script>
+</body>
+</html>
